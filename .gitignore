@@ -105,3 +105,4 @@ venv.bak/
 
 # My custom ignore
 .vscode/settings.json
+.idea/
