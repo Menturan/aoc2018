@@ -6,12 +6,12 @@ from puzzle_util.test import test
 def part1(polymer: str) -> int:
     index = 0
     polymer = list(polymer)
-    while(True):
+    while (True):
         if len(polymer) == index + 1:
             return len(polymer)
         char1 = polymer[index]
         char2 = polymer[index + 1]
-        if char1.lower() == char2.lower() and char1 != char2: # Samma bokstav fast stor och liten (Aa)
+        if char1.lower() == char2.lower() and char1 != char2:  # Samma bokstav fast stor och liten (Aa)
             polymer.pop(index + 1)
             polymer.pop(index)
             index = 0
@@ -21,21 +21,19 @@ def part1(polymer: str) -> int:
             index += 1
 
 
-
-
-
-
-
 def part1_test():
     test(part1('dabAcCaCBAcCcaDA'), 10)  # dabCBAcaDA
 
 
 def part2(input) -> int:
-    pass
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+               'v', 'x', 'y', 'z']
+    while(True):
+
 
 
 def part2_test():
-    test(0, 0)
+    test(part2('dabAcCaCBAcCcaDA'), 4)  # dabAaBAaDA
 
 
 print(tree)
